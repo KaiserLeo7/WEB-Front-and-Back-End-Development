@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB222</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/lab3-theme.css" />
+        <script src="js/image.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <h2>
+                    WEB222 - Assignment 3
+                </h2>
+            </div>
+        </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="image.html">Image</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="honesty.html">Honesty</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="main center">
+            <!-- Start your code here -->
+
+            <div>
+                <h2>HTML Images</h2>
+
+                <a href="https://ict.senecacollege.ca/">
+                    <img src="img/ict.png" alt="ICT School, Seneca College" />
+                </a>
+            </div>
+
+            <div id="nature">
+                <h3>Check Out These Images</h3>
+
+                <script>
+                    window.onload = function() {
+                        //assign div to variable
+                        var nature = document.getElementById('nature');
+
+                        ///////////////FIGURE ONE///////////////
+
+                        //create elements figure, figcaption, and img
+                        var figure1 = document.createElement('figure');
+                        var img1 = document.createElement('img');
+                        var figCaption1 = document.createElement('figcaption');
+
+                        //add figure to the div "nature"
+                        nature.appendChild(figure1);
+
+                        //add img and figcaption to figure
+                        figure1.appendChild(img1);
+                        figure1.appendChild(figCaption1);
+                        //console.log(figure1);
+
+                        //assign url and alt to Img
+                        //assign innerHTML to figcaption
+                        img1.src = images[0].url;
+                        img1.alt = images[0].alt;
+                        figCaption1.innerHTML = images[0].caption;
+
+                        ///////////////FIGURE TWO///////////////
+
+                        //create elements figure, figcaption, and img
+                        var figure2 = document.createElement('figure');
+                        var img2 = document.createElement('img');
+                        var figCaption2 = document.createElement('figcaption');
+
+                        //add figure to the div "nature"
+                        nature.appendChild(figure2);
+
+                        //add img and figcaption to figure
+                        figure2.appendChild(img2);
+                        figure2.appendChild(figCaption2);
+                        //console.log(figure2);
+
+                        //assign url and alt to Img
+                        //assign innerHTML to figcaption
+                        img2.src = images[1].url;
+                        img2.alt = images[1].alt;
+                        figCaption2.innerHTML = images[1].caption;
+
+                        ///////////////FIGURE THREE///////////////
+
+                        //create elements figure, figcaption, and img
+                        var figure3 = document.createElement('figure');
+                        var img3 = document.createElement('img');
+                        var figCaption3 = document.createElement('figcaption');
+
+                        //add figure to the div "nature"
+                        nature.appendChild(figure3);
+
+                        //add img and figcaption to figure
+                        figure3.appendChild(img3);
+                        figure3.appendChild(figCaption3);
+                        //console.log(figure3);
+
+                        //assign url and alt to Img
+                        //assign innerHTML to figcaption
+                        img3.src = images[2].url;
+                        img3.alt = images[2].alt;
+                        figCaption3.innerHTML = images[2].caption;
+
+                        ///////////////FIGURE FOUR///////////////
+
+                        //create elements figure, figcaption, and img
+                        var figure4 = document.createElement('figure');
+                        var img4 = document.createElement('img');
+                        var figCaption4 = document.createElement('figcaption');
+
+                        //add figure to the div "nature"
+                        nature.appendChild(figure4);
+
+                        //add img and figcaption to figure
+                        figure4.appendChild(img4);
+                        figure4.appendChild(figCaption4);
+                        //console.log(figure4);
+
+                        //assign url and alt to Img
+                        //assign innerHTML to figcaption
+                        img4.src = images[3].url;
+                        img4.alt = images[3].alt;
+                        figCaption4.innerHTML = images[3].caption;
+
+                        ///////////////FIGURE FIVE///////////////
+
+                        //create elements figure, figcaption, and img
+                        var figure5 = document.createElement('figure');
+                        var img5 = document.createElement('img');
+                        var figCaption5 = document.createElement('figcaption');
+
+                        //add figure to the div "nature"
+                        nature.appendChild(figure5);
+
+                        //add img and figcaption to figure
+                        figure5.appendChild(img5);
+                        figure5.appendChild(figCaption5);
+                        //console.log(figure5);
+
+                        //assign url and alt to Img
+                        //assign innerHTML to figcaption
+                        img5.src = images[4].url;
+                        img5.alt = images[4].alt;
+                        figCaption5.innerHTML = images[4].caption;
+                    };
+                </script>
+            </div>
+
+            <!-- End your code here  -->
+        </section>
+        <footer>
+            <div class="center">
+                &copy; 2019 Andriy Ostapovych
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "web222-winter-2019-assignment4",
+  "private": true,
+  "version": "1.0.0",
+  "description": "WEB222 Winter 2019 Assignment 4",
+  "scripts": {
+    "mkdir": "mkdirp assignment4-submission",
+    "eslint-to-file": "npm run eslint 1> assignment4-submission/eslint.log 2>&1",
+    "eslint": "eslint src/**/*.js",
+    "prettier": "prettier --single-quote es5 --write \"src/**/*.{html,js,css}\"",
+    "prezip": "rimraf assignment4.zip",
+    "zip": "bestzip assignment4.zip assignment4-submission/*",
+    "copy-src": "copyfiles package*.json src/*.html src/**/* assignment4-submission",
+    "prepare-submission": "run-s -n -c prettier mkdir copy-src eslint-to-file zip",
+    "clean": "rimraf assignment4.zip assignment4-submission",
+    "server": "http-server src"
+  },
+  "devDependencies": {
+    "bestzip": "^2.1.2",
+    "copyfiles": "^2.1.0",
+    "eslint": "^5.12.0",
+    "http-server": "^0.11.1",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.3"
+  }
+}

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB222</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/lab3-theme.css" />
+        <script src="js/video.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <h2>
+                    WEB222 - Assignment 3
+                </h2>
+            </div>
+        </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="image.html">Image</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="honesty.html">Honesty</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="main center">
+            <!-- Start your code here -->
+            <h2>HTML5 Video</h2>
+
+            <div id="motionPic">
+                <script src="js/video.js"></script>
+
+                <script>
+                    window.onload = function() {
+                        //create video element
+                        //create 2 source elements
+                        var videoTag = document.createElement('video');
+                        var source1 = document.createElement('source');
+                        var source2 = document.createElement('source');
+
+                        //make div into variable
+                        var motionPic = document.getElementById('motionPic');
+
+                        //append videoTag into div
+                        //append sources into audioTag
+                        motionPic.appendChild(videoTag);
+                        videoTag.appendChild(source1);
+                        videoTag.appendChild(source2);
+
+                        //add controls to audioTag
+                        //add width and height to audioTag
+                        videoTag.controls = true;
+                        videoTag.width = 320;
+                        videoTag.height = 240;
+
+                        //add src and type into source1
+                        source1.src = video.source[0].src;
+                        source1.type = video.source[0].type;
+
+                        //add src and type into source2
+                        source2.src = video.source[1].src;
+                        source2.type = video.source[1].type;
+                    };
+                    //console.log(videoTag);
+                </script>
+            </div>
+
+            <!-- End your code here  -->
+        </section>
+        <footer>
+            <div class="center">
+                &copy; 2019 Andriy Ostapovych
+            </div>
+        </footer>
+    </body>
+</html>

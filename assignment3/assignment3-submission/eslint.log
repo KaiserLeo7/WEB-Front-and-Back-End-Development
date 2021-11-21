@@ -1,0 +1,19 @@
+
+C:\Users\ranek\desktop\assignment3\src\js\audio.js
+  3:5  error  'audio' is assigned a value but never used  no-unused-vars
+
+C:\Users\ranek\desktop\assignment3\src\js\image.js
+  3:5  error  'images' is assigned a value but never used  no-unused-vars
+
+C:\Users\ranek\desktop\assignment3\src\js\list.js
+  3:5  error  'fruits' is assigned a value but never used     no-unused-vars
+  5:5  error  'directory' is assigned a value but never used  no-unused-vars
+
+C:\Users\ranek\desktop\assignment3\src\js\table.js
+  3:5  error  'users' is assigned a value but never used  no-unused-vars
+
+C:\Users\ranek\desktop\assignment3\src\js\video.js
+  3:5  error  'video' is assigned a value but never used  no-unused-vars
+
+✖ 6 problems (6 errors, 0 warnings)
+

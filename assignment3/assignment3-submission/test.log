@@ -1,0 +1,30 @@
+Validating src/audio.html
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
+
+Validating src/honesty.html
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
+
+Validating src/image.html
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
+
+Validating src/index.html
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
+
+Validating src/list.html
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
+
+Validating src/table.html
+Error: Element “style” not allowed as child of element “section” in this context. (Suppressing further errors from this subtree.)
+From line 37, column 13; to line 37, column 19
+Error: The “align” attribute on the “td” element is obsolete. Use CSS instead.
+From line 116, column 43; to line 117, column 42
+Error: The “align” attribute on the “td” element is obsolete. Use CSS instead.
+From line 122, column 54; to line 123, column 42
+Error: The “align” attribute on the “td” element is obsolete. Use CSS instead.
+From line 128, column 45; to line 129, column 42
+Error: The “align” attribute on the “td” element is obsolete. Use CSS instead.
+From line 134, column 43; to line 135, column 42
+Error: The “align” attribute on the “td” element is obsolete. Use CSS instead.
+From line 142, column 50; to line 143, column 42
+There were errors. (Tried in the text/html mode.)
+

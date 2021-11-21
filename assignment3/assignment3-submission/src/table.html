@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB222</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/lab3-theme.css" />
+        <script src="js/table.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <h2>
+                    WEB222 - Assignment 3
+                </h2>
+            </div>
+        </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="image.html">Image</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="honesty.html">Honesty</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="main center">
+            <!-- Start your code here -->
+            <h2>HTML Tables</h2>
+
+            <!-- I didnt like the way the table looked without cell borders so I added some.-->
+            <style>
+                table,
+                th,
+                td {
+                    border: 1px solid;
+                    border-collapse: collapse;
+                }
+            </style>
+            <h3>Course Schedule</h3>
+            <table>
+                <caption>
+                    CPA Program
+                </caption>
+                <tr>
+                    <th>Day</th>
+                    <th>WEB222</th>
+                    <th>DCF255</th>
+                    <th>BSD201</th>
+                    <th>OOP244</th>
+                </tr>
+
+                <tr>
+                    <td><b>MON</b></td>
+                    <td>1:30-3:15</td>
+                    <td></td>
+                    <td>11:40-1:25</td>
+                    <td>3:20-5:05</td>
+                </tr>
+
+                <tr>
+                    <td><b>TUES</b></td>
+                    <td></td>
+                    <td>12:35-3:15</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><b>WED</b></td>
+                    <td>3:20-5:05</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><b>THUR</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><b> FRI</b></td>
+                    <td></td>
+                    <td></td>
+                    <td>9:50-11:30</td>
+                    <td>11:40-1:25</td>
+                </tr>
+            </table>
+
+            <br />
+            <br />
+
+            <h3>Favorite Songs</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song Title</th>
+                        <th>Artist</th>
+                        <th>Song Length</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Cosmic Castaway</td>
+                        <td>Electrasy</td>
+                        <td align="right">3:30</td>
+                    </tr>
+
+                    <tr>
+                        <td>Throne</td>
+                        <td>Bring Me The Horizon</td>
+                        <td align="right">3:11</td>
+                    </tr>
+
+                    <tr>
+                        <td>In The End</td>
+                        <td>Linkin Park</td>
+                        <td align="right">3:36</td>
+                    </tr>
+
+                    <tr>
+                        <td>Feuer Frei</td>
+                        <td>Rammstein</td>
+                        <td align="right">3:10</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>Chop Suey</td>
+                        <td>System of a Down</td>
+                        <td align="right">3:26</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br />
+            <br />
+            <div id="table3">
+                <h3>
+                    Contact Info
+                </h3>
+
+                <script src="js/table.js"></script>
+
+                <script>
+                    //create table and give it an id
+                    var table = document.createElement('table');
+                    table.id = 'dataTable';
+                    //console.log(table);
+
+                    //add table to the div "table3"
+                    var table3 = document.getElementById('table3');
+                    table3.appendChild(table);
+
+                    //create thead and append it to table
+                    var tableHeader = document.createElement('thead');
+                    table.appendChild(tableHeader);
+
+                    //create the headerRow
+                    var headerRow = tableHeader.insertRow(0);
+
+                    //create 4 Cells, one for each Header
+                    headerRow.insertCell(0).outerHTML = '<th>First Name</th>';
+                    headerRow.insertCell(1).outerHTML = '<th>Last Name</th>';
+                    headerRow.insertCell(2).outerHTML = '<th>Age</th>';
+                    headerRow.insertCell(3).outerHTML = '<th>Email</th>';
+
+                    //create tbody and append it to table
+                    var tableBody = document.createElement('tbody');
+                    table.appendChild(tableBody);
+
+                    ////////////////////////TABLE STYLE///////////////////////
+                    table.style.border = 'double';
+
+                    // for loop that create rows
+                    // inserts cells based on the length of users...I hate programming. kinda..
+                    for (i = 0; i < users.length; i++) {
+                        var bodyRows;
+
+                        bodyRows = tableBody.insertRow(i);
+
+                        //assign data to cells
+                        var fNameCells = (bodyRows.insertCell(0).innerHTML =
+                            users[i].first_name);
+                        var lNameCells = (bodyRows.insertCell(1).innerHTML =
+                            users[i].last_name);
+                        var ageCells = (bodyRows.insertCell(2).innerHTML =
+                            users[i].age);
+
+                        var emailAdd = users[i].email;
+                        var mailto = 'mailto:' + emailAdd;
+
+                        var emailCells = (bodyRows.insertCell(
+                            3
+                        ).innerHTML = mailto); /////////////////////////////////////////////////////
+
+                        ////////////////////////ROW STYLE///////////////////////
+                        bodyRows.style.border = 'double';
+                    }
+                </script>
+
+                <br />
+                <br />
+                <br />
+            </div>
+
+            <!-- End your code here -->
+        </section>
+        <footer>
+            <div class="center">
+                &copy; 2019 Andriy Ostapovych
+            </div>
+        </footer>
+    </body>
+</html>

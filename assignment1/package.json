@@ -1,0 +1,31 @@
+{
+  "name": "web222-winter-2019-assignment1",
+  "private": true,
+  "version": "1.0.0",
+  "description": "WEB222 Winter 2019 Assignment 1",
+  "scripts": {
+    "mkdir": "mkdirp assignment1-submission",
+    "eslint-to-file": "npm run eslint 1> assignment1-submission/eslint.log 2>&1",
+    "eslint": "eslint assignment1*.js",
+    "prettier": "prettier --single-quote es5 --write \"assignment1*.js\"",
+    "prezip": "rimraf assignment1.zip",
+    "zip": "bestzip assignment1.zip assignment1-submission/*",
+    "test-to-file": "npm run test 1> assignment1-submission/test.log 2>&1",
+    "test": "mocha assignment1.test.js",
+    "test-live": "mocha --watch assignment1.test.js",
+    "copy-src": "copyfiles package*.json assignment1*.js assignment1-submission",
+    "prepare-submission": "run-s -n -c prettier mkdir copy-src eslint-to-file test-to-file zip",
+    "clean": "rimraf assignment1.zip assignment1-submission"
+  },
+  "devDependencies": {
+    "bestzip": "^2.1.2",
+    "chai": "^4.2.0",
+    "copyfiles": "^2.1.0",
+    "eslint": "^5.12.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.3"
+  }
+}

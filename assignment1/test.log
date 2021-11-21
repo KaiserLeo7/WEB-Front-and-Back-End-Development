@@ -1,0 +1,12 @@
+
+
+  Task 7 - buildQueryString
+    √ should build a query string from product name and quantity
+    √ should build a query string from product name, quantity, and gift
+    √ should properly encode non-URL characters in query string
+    √ should assume 1 if quantity is 0
+    √ should assume 1 if quantity is negative
+
+
+  5 passing (7ms)
+

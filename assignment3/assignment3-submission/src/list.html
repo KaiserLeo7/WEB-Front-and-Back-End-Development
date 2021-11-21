@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB222</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/lab3-theme.css" />
+        <script src="js/list.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <h2>
+                    WEB222 - Assignment 3
+                </h2>
+            </div>
+        </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="image.html">Image</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="honesty.html">Honesty</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="main center">
+            <!-- Start your code here -->
+            <h2>HTML Lists</h2>
+
+            <div class="fruits">
+                <h3>
+                    Fruit
+                </h3>
+                <!-- Call in outside JS script-->
+                <script src="js/list.js"></script>
+
+                <ol id="fruits"></ol>
+
+                <script>
+                    var basket = '';
+
+                    for (var i = 0; i < fruits.length; i++) {
+                        basket += '<li>' + fruits[i] + '</li>';
+                    }
+                    document.getElementById('fruits').innerHTML = basket;
+                </script>
+            </div>
+
+            <div id="directory">
+                <h3>
+                    Directories
+                </h3>
+
+                <script src="js/list.js"></script>
+
+                <script>
+                    window.onload = function() {
+                        //assign div to variable directory
+                        var directoryTag = document.getElementById('directory');
+
+                        //creating the MAIN Unordered List
+                        var uList = document.createElement('ul');
+
+                        //append uList into div "directory"
+                        directoryTag.appendChild(uList);
+
+                        //create the MAIN unordered lists li's
+                        var uList1a = document.createElement('li');
+                        var uList1b = document.createElement('li');
+                        var HTMLf = document.createElement('li');
+                        var uList1d = document.createElement('li');
+                        var JSf = document.createElement('li');
+
+                        //append the MAIN li's into uList
+                        uList.appendChild(uList1a);
+                        uList.appendChild(uList1b);
+                        uList.appendChild(HTMLf);
+                        uList.appendChild(uList1d);
+                        uList.appendChild(JSf);
+
+                        //add innerHTML into the MAIN unordered lists li's
+                        uList1a.innerHTML = directory[0].name;
+                        uList1b.innerHTML = directory[1].name;
+                        HTMLf.innerHTML = directory[2].name;
+                        uList1d.innerHTML = directory[3].name;
+                        JSf.innerHTML = directory[4].name;
+
+                        //create HTML Files li's
+                        var uList2a = document.createElement('li');
+                        var uList2b = document.createElement('li');
+
+                        //append sub li's into HTMLf
+                        HTMLf.appendChild(uList2a);
+                        HTMLf.appendChild(uList2b);
+
+                        //add innerHTML into sub li's
+                        /// uList2a.innerHTML = directory.files.name;
+                        //uList2b.innerHTML = directory.files.name;
+
+                        //create JavaScript Files li's
+                        var uList3a = document.createElement('li');
+                        var uList3b = document.createElement('li');
+                        var uList3c = document.createElement('li');
+
+                        //append sub li's into HTMLf
+                        JSf.appendChild(uList3a);
+                        JSf.appendChild(uList3b);
+                        JSf.appendChild(uList3c);
+
+                        // console.log(uList);
+                    };
+                </script>
+            </div>
+
+            <!-- End your code here  -->
+        </section>
+        <footer>
+            <div class="center">
+                &copy; 2019 Andriy Ostapovych
+            </div>
+        </footer>
+    </body>
+</html>
